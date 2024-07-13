@@ -1,10 +1,28 @@
-{% extends "booking/base.html" %}
+{% extends 'booking/base.html' %}
+
+{% block title %}Home - Online Ticket Booking System{% endblock %}
 
 {% block content %}
-<h2>Available Events</h2>
-<ul>
-    {% for event in events %}
-    <li>{{ event.name }} - {{ event.date }} - {{ event.location }}</li>
-    {% endfor %}
-</ul>
+<section class="hero">
+    <div class="container">
+        <h1>Welcome to Online Ticket Booking System</h1>
+        <p>Discover and book upcoming events.</p>
+        <a href="{% url 'events' %}" class="btn btn-primary">Browse Events</a>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+        <h2>Why Choose Us?</h2>
+        <div class="feature">
+            <h3>Wide Range of Events</h3>
+            <p>Explore concerts, sports, conferences, and more.</p>
+        </div>
+        <div class="feature">
+            <h3>Secure Booking Process</h3>
+            <p>Ensure safe transactions and data protection.</p>
+        </div>
+        <!-- Add more features as needed -->
+    </div>
+</section>
 {% endblock %}

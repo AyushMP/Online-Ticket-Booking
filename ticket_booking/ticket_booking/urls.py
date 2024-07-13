@@ -5,4 +5,5 @@ urlpatterns = [
     path('', include('booking.urls')),  # Direct root URL to booking app URLs
     path('admin/', admin.site.urls),
     path('booking/', include('booking.urls')),
+    
 ]

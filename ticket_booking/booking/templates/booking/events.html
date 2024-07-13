@@ -1,0 +1,21 @@
+<!-- events.html -->
+
+{% extends 'base.html' %}
+
+{% block title %}Events List - {{ block.super }}{% endblock %}
+
+{% block content %}
+    <h2>Events List</h2>
+    <ul>
+        {% for event in events %}
+            <li>
+                <strong>{{ event.name }}</strong><br>
+                Description: {{ event.description }}<br>
+                Date: {{ event.date }}
+            </li>
+            <br>
+        {% empty %}
+            <li>No events available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
