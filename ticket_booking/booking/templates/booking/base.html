@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Online Ticket Booking{% endblock %}</title>
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'events' %}">Events</a></li>
+                <li><a href="{% url 'about' %}">About</a></li>
+                <!-- Additional navigation links as needed -->
+            </ul>
+        </nav>
+        <h1>Online Ticket Booking System</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <hr>
+            <p>&copy; {% now "Y" %} Online Ticket Booking. All rights reserved.</p>
+            <p>Developed by Ayush M P (1JT21CS023)</p>
+            <!-- Additional footer content like social media links, terms of service, etc. -->
+        </div>
+    </footer>
+
+    <!-- Include JavaScript files and scripts -->
+
+    <!-- Additional scripts for functionality -->
+</body>
+</html>
