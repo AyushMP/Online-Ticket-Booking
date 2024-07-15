@@ -7,4 +7,5 @@ urlpatterns = [
     path('about/', views.about, name='about'),  # Maps to '/about/'
     path('other/', views.other_templates, name='other_templates'),  # Maps to '/other/'
     path('home/', views.home, name='home'),  # Example: Maps to '/home/'
+     path('book_ticket/<int:event_id>/', views.book_ticket, name='book_ticket'),
 ]

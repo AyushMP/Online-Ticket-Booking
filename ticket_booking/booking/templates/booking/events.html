@@ -11,7 +11,9 @@
             <li>
                 <strong>{{ event.name }}</strong><br>
                 Description: {{ event.description }}<br>
-                Date: {{ event.date }}
+                Date: {{ event.date }}<br>
+                Price: ${{ event.price }}<br>
+                <button onclick="bookTicket({{ event.id }})">Buy Tickets</button>
             </li>
             <br>
         {% empty %}
@@ -19,3 +21,4 @@
         {% endfor %}
     </ul>
 {% endblock %}
+

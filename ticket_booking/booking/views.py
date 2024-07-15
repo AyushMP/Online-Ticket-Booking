@@ -1,17 +1,22 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Event
+from django.http import JsonResponse
+
+def events(request):
+    events = Event.objects.all()
+    context = {
+        'events': events,
+    }
+    return render(request, 'booking/events.html', context)
+
+def book_ticket(request, event_id):
+    event = get_object_or_404(Event, id=event_id)
+    # Logic for booking the ticket would go here
+    return JsonResponse({'message': 'Tickets booked for ' + event.name})
 
 def index(request):
     events = Event.objects.all()
     return render(request, 'booking/index.html', {'events': events})
-
-def events(request):
-    events = Event.objects.all() 
-    context = {
-        'events': events,
-    }
-    print('Rendering events.html with context:', context)
-    return render(request, 'booking/events.html', context)
 
 def other_templates(request):
     return render(request, 'booking/other_templates.html')

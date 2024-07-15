@@ -6,6 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Online Ticket Booking System{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script>
+        function bookTicket(eventId) {
+            fetch(`/book_ticket/${eventId}/`)
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                });
+        }
+    </script>
 </head>
 <body>
     <header>

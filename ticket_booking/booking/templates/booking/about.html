@@ -1,8 +1,45 @@
 <!-- booking/templates/booking/about.html -->
 
 {% extends 'booking/base.html' %}
+
+{% block title %}About Us - {{ block.super }}{% endblock %}
+
 {% block content %}
-<h2>About Us</h2>
-<p>This is an Online Ticket Booking System designed to make event booking seamless and efficient.</p>
-<!-- Add more content as needed -->
+    <section class="about-section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>Welcome to our Online Ticket Booking System! We are dedicated to providing you with a seamless experience for booking tickets to your favorite events. Our platform is designed to be user-friendly, offering a wide range of events from sports to concerts and more. With secure transactions and real-time notifications, we ensure that your ticket booking process is smooth and efficient.</p>
+            <p>Explore our platform and start booking your tickets today!</p>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="container">
+            <h2>Our Team</h2>
+            <div class="team-member">
+                
+                <h3>Ayush M P</h3>
+                <p>Co-Founder & CEO</p>
+            </div>
+            <div class="team-member">
+                
+                <h3>Jane Smith</h3>
+                <p>Co-Founder & COO</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="mission-vision-section">
+        <div class="container">
+            <h2>Our Mission & Vision</h2>
+            <div class="mission">
+                <h3>Our Mission</h3>
+                <p>To revolutionize the ticket booking experience by providing a convenient, secure, and efficient platform for users worldwide.</p>
+            </div>
+            <div class="vision">
+                <h3>Our Vision</h3>
+                <p>To become the leading online ticket booking platform known for its reliability, innovation, and customer satisfaction.</p>
+            </div>
+        </div>
+    </section>
 {% endblock %}
