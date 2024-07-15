@@ -6,10 +6,11 @@ def index(request):
     return render(request, 'booking/index.html', {'events': events})
 
 def events(request):
-    events = Event.objects.all()  # Retrieve all events
+    events = Event.objects.all() 
     context = {
         'events': events,
     }
+    print('Rendering events.html with context:', context)
     return render(request, 'booking/events.html', context)
 
 def other_templates(request):
